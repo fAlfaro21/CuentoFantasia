@@ -1,0 +1,163 @@
+
+body{
+    background-image:url(../img/trippy.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body .buenosYobjetos{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.buenos{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.buenos img{
+    width: 80px;
+}
+
+.objetos{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+ }
+
+.objetos img{
+    width: 100px;
+}
+
+.malos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.malos img{
+    width: 100px;
+}
+
+ @keyframes aparecePrincipe{
+    0% {
+        filter: opacity(0%);
+    }
+    50%{
+        transform: translateX(450px);
+    }
+    100%{
+        transform:none;
+    }
+}
+
+
+@keyframes aparecePrincesa{
+    0% {
+        filter: opacity(0%);
+    }
+    50%{
+        transform: translateX(450px);
+    }
+    100%{
+        transform: none;
+    }
+}
+
+@keyframes apareceHada{
+    0% {
+        filter: opacity(0%);
+    }
+    50%{
+        transform: translateX(450px);
+    }
+    100%{
+        transform: none;
+    }
+}
+
+@keyframes apareceRana{
+    0% {
+        filter: opacity(0%);
+    }
+    50%{
+        transform: translateX(450px);
+    }
+    100%{
+        transform: none;
+    }
+}
+
+@keyframes aparecenObjetos{
+    0% {
+        filter: opacity(0%);
+    }
+    
+    50%{
+        transform: translateX(-450px) rotate(-45deg);
+        
+    }
+    75%{
+        transform: rotate(45deg);
+       
+    }
+    100%{
+        transform: none;
+    }
+}
+
+@keyframes giroDelNomo {
+    0% {
+      transform: none;
+    }
+    50% {
+      transform: rotateX(360deg);
+    }
+    100%{
+        transform: none;
+    }
+  }
+
+#principe {
+    display: initial;
+    animation: aparecePrincipe 2s;
+  }
+
+#princesa {
+    display: initial;
+    animation: aparecePrincesa 2s;
+    animation-delay: 2s;
+  }
+
+#hadaMadrina {
+    display: initial;
+    animation: apareceHada 2s;
+    animation-delay: 4s;
+  }
+
+#rana {
+    display: initial;
+    animation: apareceRana 2s;
+    animation-delay: 6s;
+  }
+
+#castillo, #lampara, #espada, #manzana{
+    animation: aparecenObjetos 5s;
+    animation-delay: 8s;
+}
+
+#bruja:hover{
+    /* transform: skewX(30deg); */
+    transform: matrix(3, -0.3, 0, 1, 0, 0);
+}
+
+#dragon:hover{
+    transform: scale(2,3);
+}
+
+#nomo:hover{
+    animation: giroDelNomo 2s;
+}
